@@ -6,38 +6,34 @@ using System.Threading.Tasks;
 
 namespace ACM.BL
 {
-     
+
     public class Customer
     {
-        public string CustomerID { get; private set; }
 
-       
-        public string emailAddress { get; private set; }
-        private string _lastname;
-        private string _firstName;
 
-        public string Fullname {
+        public int CustomerId { get; private set; }
+        public string EmailAddress { get; set; }
+        public string FirstName { get; set; }
+        public string FullName
+        {
             get
             {
-                return lastname + "," + firstname;
+                return LastName + "," + FirstName;
             }
-                 }
-
-        public string firstname
-        {
-            get { return _firstName; }
-
-
-            set { _lastname = value; }
-
         }
-        public string lastname
+        private string _lastName;
+        public string LastName
         {
-            get { return _lastname; }
-
-
-            set { _lastname = value; }
-
+            get
+            {
+                return _lastName;
+            }
+            set
+            {
+                _lastName = value;
+            }
         }
     }
 }
+
+

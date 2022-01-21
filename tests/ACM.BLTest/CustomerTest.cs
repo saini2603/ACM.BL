@@ -14,11 +14,11 @@ namespace ACM.BLTest
             //--Arrange
             Customer customer = new Customer
             {
-                FirstName = "Bildo",
-                LastName="Baggins"  
+                FirstName = "Rohit",
+                LastName="Saini"  
             };
 
-            string expected = "Baggins,Bildo";
+            string expected = "Saini,Rohit";
 
             //--Act
 
@@ -28,17 +28,18 @@ namespace ACM.BLTest
             Assert.AreEqual(expected, actual);
         }
 
+        [TestMethod]
         public void FullNameFirstNameEmpty()
         {
             //--Arrange
 
             Customer customer = new Customer
             {
-                LastName = "Baggins"
+                LastName = "Saini"
 
             };
 
-            string expected = "Baggins";
+            string expected = "Saini";
 
             //-- Act
             string actual = customer.FullName;
